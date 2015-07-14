@@ -1,0 +1,39 @@
+{
+	"id": "PHPfox_RingCaptcha",
+	"name": "SMS Captcha",
+	"icon": "//d2h79mkp7etn4r.cloudfront.net/icon/2015/07/ae5c525be08bb5022cda99cc1d82af47.png",
+	"version": "1.0",
+	"requires": {
+		"phpfox": ">= 4.0.2"
+	},
+	"webhooks": {
+		"plugin:user.component_controller_register_2": "{{ _url }}extend/ringcaptcha?webhook=component_controller_register_2"
+	},
+	"routes": {
+		"/ringcaptcha-verify": {
+			"url": "{{ _url }}extend/ringcaptcha?page=verify"
+		},
+		"/ringcaptcha-popup": {
+			"url": "{{ _url }}extend/ringcaptcha?page=popup"
+		}
+	},
+	"settings": {
+		"ringcaptcha_enabled": {
+			"info": "RingCaptcha Enabled",
+			"type": "input:radio",
+			"value": 0,
+			"js_variable": true
+		},
+		"ringcaptcha_app_key": {
+			"info": "App Key"
+		},
+		"ringcaptcha_secret_key": {
+			"info": "Secret Key"
+		},
+		"ringcaptcha_name": {
+			"info": "Sender Name (Max 11 alpha characters)",
+			"value": "PHPfox"
+		}
+	},
+	"_url": "http://store.phpfox.us/"
+}

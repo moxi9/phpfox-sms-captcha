@@ -1,0 +1,6 @@
+.ringcaptcha.widget {
+  max-width: none !important;
+}
+.js_box_content .ringcaptcha.widget .wizard .wizard-step-header {
+  display: none !important;
+}

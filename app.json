@@ -6,9 +6,6 @@
 	"requires": {
 		"phpfox": ">= 4.0.2"
 	},
-	"webhooks": {
-		"plugin:user.component_controller_register_2": "{{ _url }}extend/ringcaptcha?webhook=component_controller_register_2"
-	},
 	"routes": {
 		"/ringcaptcha-verify": {
 			"url": "{{ _url }}extend/ringcaptcha?page=verify"
